@@ -1,0 +1,139 @@
+:root{
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh sans';
+    font-size: 12px;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main{
+    width: 65%;
+    display: flex;
+    gap: 45px;
+    background: url(images/bg-pattern-desktop.svg);
+    background-color: var(--Light-grayish-blue);
+    background-position: center;
+    border-radius: 15px;
+    padding: 50px;
+    padding-left: 0;
+}
+
+main .left{
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+
+main .left .woman{
+    width: 100%;
+    position: absolute;
+}
+
+main .left .box{
+    position: absolute;
+    left: -7.5rem;
+    top: 8rem;
+}
+
+main .right{
+    width: 50%;
+}
+
+main .right h1{
+    font-size: 35px; 
+    margin-bottom: 20px;  
+}
+
+main .right .text .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+main .right .text .heading,
+main .right .text .detail,
+main .right .text hr{
+    margin-bottom: 12px;
+}
+
+main .right .text .heading h4{
+    font-weight: 600;
+    color: var(--Dark-grayish-blue);
+}
+
+main .right .active .heading h4{
+    color: black;
+}
+
+main .right .text:hover .heading h4{
+    color: var(--Soft-red);
+}
+
+main .right .text .detail{
+    display: none;
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+}
+
+main .right .active .detail{
+    display: block;
+}
+
+main .right .text hr{
+    background-color: var(--Light-grayish-blue);
+}
+
+@media (max-width: 750px){
+    body{
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    main{
+        flex-direction: column;
+        padding: 25px;
+        padding-top: 0;
+        background: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-color: var(--Light-grayish-blue);
+    }
+
+    main .left{
+        width: 100%;
+    }
+
+    main .left .woman{
+        top: -125px;
+    }
+
+    main .left .box{
+        top: -75px;
+        left: -75px;
+    }
+
+    main .right{
+        width: 100%;
+    }
+}
